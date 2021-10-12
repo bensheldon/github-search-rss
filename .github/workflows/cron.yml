@@ -1,8 +1,9 @@
 name: rss
 on:
+  workflow_dispatch: 
   push:
     branches:
-      - main  # Set a branch name to trigger deployment
+      - bensheldon
   schedule:
     - cron: '0 0 * * *'
 jobs:
