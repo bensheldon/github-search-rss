@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><opml version="2.0">
     <head>
     <title>GitHub Search Subscriptions</title>
-    <dateCreated>2021-10-12T02:55:40.799Z</dateCreated>
+    <dateCreated>2021-10-12T04:59:15.930Z</dateCreated>
 </head>
     <body>
     <outline title="Subscriptions">
         <outline>
-            <outline type="rss" title="rails/rails: Issues containing &apos;ActiveJob Job&apos;" htmlUrl="https://bensheldon.github.io/github-search-rss/rails-activejob.json" xmlUrl="https://bensheldon.github.io/github-search-rss/rails-activejob.json"/>
+            <outline type="rss" title="rails/rails: Issues containing &apos;ActiveJob Job&apos;" htmlUrl="https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&amp;type=Issues" xmlUrl="https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&amp;type=Issues"/>
         </outline>
     </outline>
 </body>
