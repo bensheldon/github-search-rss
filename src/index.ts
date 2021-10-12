@@ -171,6 +171,7 @@ export type GenerateRSSOptions = {
     title: string;
     description: string;
     link: string;
+    homepage?: string;
     image?: string;
     favicon?: string;
     updated: Date;
@@ -182,7 +183,8 @@ export const generateRSS = (items: Item[], options: GenerateRSSOptions) => {
         title: options.title,
         description: options.description,
         id: options.link,
-        link: options.link,
+        link: options.homepage || options.link,
+        feedLinks: { json: options.link },
         image: options.image,
         favicon: options.favicon,
         copyright: "github-search-rss",
@@ -207,7 +209,8 @@ export const generateRSS = (items: Item[], options: GenerateRSSOptions) => {
                     email: `${item.author.login}@noreply.github.com`
                 }
             ],
-            date: dayjs(item.createdAt).toDate()
+            published: dayjs(item.createdAt).toDate(),
+            date: dayjs(item.updatedAt).toDate()
         });
     });
     if (path.extname(options.link) === ".json") {
@@ -254,7 +257,7 @@ if (require.main === module) {
         const opml = convertJsonToOPML(SEARCH_ITEMS);
         await fs.writeFile(path.join(distDir, "index.opml"), opml, "utf-8");
         const links = SEARCH_ITEMS.map((feed) => {
-            return `<li><code>${escapeSpecialChars(feed.query)}</code>: <a href="${feed.link}">${feed.link}</a></li>`;
+            return `<li><strong><a href="${feed.homepage}">${feed.title}</a></strong> (<a href="${feed.link}">link</a>) <code>${escapeSpecialChars(feed.query)}</code></a> </li>`;
         }).join("\n");
         const index = {
             html: `
