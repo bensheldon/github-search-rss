@@ -171,6 +171,7 @@ export type GenerateRSSOptions = {
     title: string;
     description: string;
     link: string;
+    homepage: string;
     image?: string;
     favicon?: string;
     updated: Date;
@@ -182,7 +183,7 @@ export const generateRSS = (items: Item[], options: GenerateRSSOptions) => {
         title: options.title,
         description: options.description,
         id: options.link,
-        link: options.link,
+        link: options.homepage,
         image: options.image,
         favicon: options.favicon,
         copyright: "github-search-rss",
@@ -254,7 +255,7 @@ if (require.main === module) {
         const opml = convertJsonToOPML(SEARCH_ITEMS);
         await fs.writeFile(path.join(distDir, "index.opml"), opml, "utf-8");
         const links = SEARCH_ITEMS.map((feed) => {
-            return `<li><code>${escapeSpecialChars(feed.query)}</code>: <a href="${feed.link}">${feed.link}</a></li>`;
+            return `<li><strong><a href="${feed.homepage}">${feed.title}</a></strong> (<a href="${feed.link}">link</a>) <code>${escapeSpecialChars(feed.query)}</code></a> </li>`;
         }).join("\n");
         const index = {
             html: `

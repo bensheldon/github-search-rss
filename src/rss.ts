@@ -15,7 +15,8 @@ export const SEARCH_ITEMS: RSSItem[] = [
         title: "rails/rails: Issues containing 'ActiveJob Job'",
         query: "ActiveJob Job repo:rails/rails is:issue",
         TYPE: "ISSUE",
-        link: "https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&type=Issues"
+        link: `${BASE_URL}/rails-activejob.json`,
+        homepage: "https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&type=Issues",
     }
 
     // // Issue
