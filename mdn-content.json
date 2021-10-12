@@ -5,6 +5,16 @@
     "description": "mdn/content update content on GitHub",
     "items": [
         {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/91840876?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/>\n<h4>Summary</h4>\n<p>\"Case-insensitive\" -&gt; \"not case-sensitive\" to make it clearer for users, easier to understand IMO.</p>\n\n<h4>Motivation</h4>\n<p>When I went back to read this page, I read this note and missed the \"in\" part of \"Case-insensitive\". I feel like \"not case-sensitive\" might be a lot clearer to some users, and, at least in my opinion, is easier to read/understand</p>\n\n<h4>Supporting details</h4>\n<p>None</p>\n\n<h4>Related issues</h4>\n<p>None</p>\n\n<h4>Metadata</h4>\n<p>N/A</p>\n\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Adds a new document</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Rewrites (or significantly expands) a document</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Fixes a typo, bug, or other error</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Other</li>\n</ul>\n",
+            "url": "https://github.com/mdn/content/pull/9739",
+            "title": "Changed wording to possibly avoid confusion",
+            "date_modified": "2021-10-12T02:04:23.000Z",
+            "author": {
+                "name": "alexiswa",
+                "url": "https://github.com/alexiswa"
+            }
+        },
+        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5368500?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p><span class=\"issue-keyword tooltipped tooltipped-se\" aria-label=\"This pull request closes issue #9732.\">Fixes</span> <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"1022546368\" data-permission-text=\"Title is private\" data-url=\"https://github.com/mdn/content/issues/9732\" data-hovercard-type=\"issue\" data-hovercard-url=\"/mdn/content/issues/9732/hovercard\" href=\"https://github.com/mdn/content/issues/9732\">#9732</a></p>\n<p>This originally said the fill() was filling with random values, but what they mean is \"an arbitrary value I chose\".<br>\nThis makes it clear that the array is populated with the specified value.</p>",
             "url": "https://github.com/mdn/content/pull/9738",
             "title": "Array.fill() does not populate with random values",
@@ -192,16 +202,6 @@
             "author": {
                 "name": "kevinoid",
                 "url": "https://github.com/kevinoid"
-            }
-        },
-        {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/87595311?u=c73633e567b78798f204b2f4d34c66ef87d1afd3&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p>The default value of configurable, enumerble, writable should be true</p>\n\n<h4>Summary</h4>\n\n<h4>Motivation</h4>\n\n<h4>Supporting details</h4>\n\n<h4>Related issues</h4>\n\n<h4>Metadata</h4>\n\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Adds a new document</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Rewrites (or significantly expands) a document</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Fixes a typo, bug, or other error</li>\n</ul>\n",
-            "url": "https://github.com/mdn/content/pull/9624",
-            "title": "default value",
-            "date_modified": "2021-10-06T14:41:38.000Z",
-            "author": {
-                "name": "zibin-ybjb",
-                "url": "https://github.com/zibin-ybjb"
             }
         }
     ]

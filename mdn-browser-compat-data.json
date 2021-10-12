@@ -5,6 +5,16 @@
     "description": "mdn/browser-compat-data update data on GitHub",
     "items": [
         {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5179191?u=6717e5ff89d22ac777c8bebbf54e89ed0fbf81e8&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p>This PR adds real values for Chromium (Chrome, Opera, Samsung Internet, WebView Android) for the various subfeatures of the <code>getModifierState</code> member of the <code>KeyboardEvent</code> API, based upon commit history and date.</p>\n<p>Commits:<br>\n<a rel=\"nofollow\" href=\"https://source.chromium.org/chromium/chromium/src/+/505226f3a97da1bc204283385cf2ac3ba9409fc3\">https://source.chromium.org/chromium/chromium/src/+/505226f3a97da1bc204283385cf2ac3ba9409fc3</a><br>\n<a rel=\"nofollow\" href=\"https://source.chromium.org/chromium/chromium/src/+/299efe15d10d2dfbfb5bcc7c2f753ddc4f318832\">https://source.chromium.org/chromium/chromium/src/+/299efe15d10d2dfbfb5bcc7c2f753ddc4f318832</a><br>\n<a rel=\"nofollow\" href=\"https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/events/ui_event_with_key_state.cc;drc=916c12f8dabe24c951bb6b306580f7d408f95049\">https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/events/ui_event_with_key_state.cc;drc=916c12f8dabe24c951bb6b306580f7d408f95049</a></p>",
+            "url": "https://github.com/mdn/browser-compat-data/pull/12799",
+            "title": "Add Chromium versions for api.KeyboardEvent.getModifierState",
+            "date_modified": "2021-10-12T00:40:15.000Z",
+            "author": {
+                "name": "queengooborg",
+                "url": "https://github.com/queengooborg"
+            }
+        },
+        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5179191?u=6717e5ff89d22ac777c8bebbf54e89ed0fbf81e8&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p>This PR removes the <code>smoothing_downscaling</code> subfeature of the <code>drawImage</code> method of <code>CanvasRenderingContext2D</code>.  This feature was a remnant from the old wiki migration.  There is nothing in the docs explaining what exactly this means, so it's unclear how to test support for this.  With that, plus the fact that this isn't a spec-defined behavior, I think it makes sense to simply remove this subfeature from BCD.</p>",
             "url": "https://github.com/mdn/browser-compat-data/pull/12796",
             "title": "Remove api.CanvasRenderingContext2D.drawImage.smoothing_downscaling",
@@ -172,16 +182,6 @@
             "author": {
                 "name": "Schweinepriester",
                 "url": "https://github.com/Schweinepriester"
-            }
-        },
-        {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/194984?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/>",
-            "url": "https://github.com/mdn/browser-compat-data/pull/12721",
-            "title": "Change heycam.github.io URLs to webidl.spec.whatwg.org URLs",
-            "date_modified": "2021-10-06T04:42:06.000Z",
-            "author": {
-                "name": "sideshowbarker",
-                "url": "https://github.com/sideshowbarker"
             }
         }
     ]
