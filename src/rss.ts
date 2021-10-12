@@ -12,8 +12,8 @@ const BASE_URL = "https://bensheldon.github.io/github-search-rss";
 // https://docs.github.com/en/graphql/reference/queries#searchresultitemconnection
 export const SEARCH_ITEMS: RSSItem[] = [
     {
-        title: "rails/rails ActiveJob Topics",
-        query: "repo:rails/rails is:issue ActiveJob Job",
+        title: "rails/rails: Issues containing 'ActiveJob Job'",
+        query: " ActiveJob Job repo:rails/rails is:issue sort:updated",
         TYPE: "ISSUE",
         link: `${BASE_URL}/rails-activejob.json`
     }
