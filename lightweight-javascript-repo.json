@@ -1,0 +1,229 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "LightWeight JavaScript repositories",
+    "home_page_url": "https://azu.github.io/github-search-rss/lightweight-javascript-repo.json",
+    "feed_url": "https://azu.github.io/github-search-rss/lightweight-javascript-repo.json",
+    "description": "LightWeight JavaScript repositories on GitHub",
+    "items": [
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/8694183?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>node-haxball is the most powerful and lightweight bot API written by abc as a javascript library that supports both node.js and browser environments and will include every possible hack and functionality that you can imagine as a Haxball(<a href=\"http://www.haxball.com\" rel=\"nofollow\">www.haxball.com</a>) host AND client.</div>",
+            "url": "https://github.com/wxyz-abcd/node-haxball",
+            "title": "wxyz-abcd/node-haxball: node-haxball is the most powerful and lightweight bot API written by abc as a javascript library that supports both node.js and browser environments and will include every possible hack and functionality that you can imagine as a Haxball(www.haxball.com) host AND client.",
+            "date_modified": "2022-12-12T10:10:48.000Z",
+            "date_published": "2022-10-31T12:47:44.000Z",
+            "author": {
+                "name": "wxyz-abcd",
+                "url": "https://github.com/wxyz-abcd"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/100081325?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div><g-emoji class=\"g-emoji\" alias=\"rocket\" fallback-src=\"https://github.githubassets.com/images/icons/emoji/unicode/1f680.png\">🚀</g-emoji> <g-emoji class=\"g-emoji\" alias=\"iphone\" fallback-src=\"https://github.githubassets.com/images/icons/emoji/unicode/1f4f1.png\">📱</g-emoji> The Nuxt-Swipe plugin allows you to easily add swipe gesture support to your Nuxt3 projects. With this plugin, you can use swipe gestures to navigate between pages, trigger actions, and more</div>",
+            "url": "https://github.com/emanuele-em/nuxt-swipe",
+            "title": "emanuele-em/nuxt-swipe: 🚀 📱 The Nuxt-Swipe plugin allows you to easily add swipe gesture support to your Nuxt3 projects. With this plugin, you can use swipe gestures to navigate between pages, trigger actions, and more",
+            "date_modified": "2022-12-12T16:58:57.000Z",
+            "date_published": "2022-12-09T11:09:40.000Z",
+            "author": {
+                "name": "emanuele-em",
+                "url": "https://github.com/emanuele-em"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/6512473?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>a lightweight library of useful expected conditions for the WebdriverIO framework.</div>",
+            "url": "https://github.com/webdriverio/wdio-wait-for",
+            "title": "webdriverio/wdio-wait-for: a lightweight library of useful expected conditions for the WebdriverIO framework.",
+            "date_modified": "2022-11-28T17:21:59.000Z",
+            "date_published": "2021-04-19T17:35:57.000Z",
+            "author": {
+                "name": "webdriverio",
+                "url": "https://github.com/webdriverio"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5559820?u=844c53eaceeb62a85e815f913affe41dee7ac85e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, promise based abstraction layer for Quick Base Tables</div>",
+            "url": "https://github.com/tflanagan/node-qb-table",
+            "title": "tflanagan/node-qb-table: A lightweight, promise based abstraction layer for Quick Base Tables",
+            "date_modified": "2022-08-11T19:20:09.000Z",
+            "date_published": "2017-09-14T13:59:18.000Z",
+            "author": {
+                "name": "tflanagan",
+                "url": "https://github.com/tflanagan"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/56705059?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight AKS container log collector that writes to an Azure Storage Account.</div>",
+            "url": "https://github.com/omarmciver/kubernetes-lightweight-logger",
+            "title": "omarmciver/kubernetes-lightweight-logger: A lightweight AKS container log collector that writes to an Azure Storage Account.",
+            "date_modified": "2022-12-09T19:44:38.000Z",
+            "date_published": "2022-12-07T15:44:48.000Z",
+            "author": {
+                "name": "omarmciver",
+                "url": "https://github.com/omarmciver"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5559820?u=844c53eaceeb62a85e815f913affe41dee7ac85e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, promise based abstraction layer for Quick Base Reports</div>",
+            "url": "https://github.com/tflanagan/node-qb-report",
+            "title": "tflanagan/node-qb-report: A lightweight, promise based abstraction layer for Quick Base Reports",
+            "date_modified": "2022-08-17T15:41:34.000Z",
+            "date_published": "2020-04-27T21:48:10.000Z",
+            "author": {
+                "name": "tflanagan",
+                "url": "https://github.com/tflanagan"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5559820?u=844c53eaceeb62a85e815f913affe41dee7ac85e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, promise based abstraction layer for Quick Base Records</div>",
+            "url": "https://github.com/tflanagan/node-qb-record",
+            "title": "tflanagan/node-qb-record: A lightweight, promise based abstraction layer for Quick Base Records",
+            "date_modified": "2022-12-08T17:22:04.000Z",
+            "date_published": "2017-09-14T13:50:09.000Z",
+            "author": {
+                "name": "tflanagan",
+                "url": "https://github.com/tflanagan"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5559820?u=844c53eaceeb62a85e815f913affe41dee7ac85e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, promise based abstraction layer for Quick Base Fields</div>",
+            "url": "https://github.com/tflanagan/node-qb-field",
+            "title": "tflanagan/node-qb-field: A lightweight, promise based abstraction layer for Quick Base Fields",
+            "date_modified": "2022-08-17T15:30:37.000Z",
+            "date_published": "2019-10-01T14:11:41.000Z",
+            "author": {
+                "name": "tflanagan",
+                "url": "https://github.com/tflanagan"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/52939776?u=e29664b6df428090a34b19209561c47e2f78c189&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight budgeting app</div>",
+            "url": "https://github.com/JohnSebastian3/better-budget",
+            "title": "JohnSebastian3/better-budget: A lightweight budgeting app",
+            "date_modified": "2022-12-09T00:56:49.000Z",
+            "date_published": "2022-12-07T18:16:25.000Z",
+            "author": {
+                "name": "JohnSebastian3",
+                "url": "https://github.com/JohnSebastian3"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5559820?u=844c53eaceeb62a85e815f913affe41dee7ac85e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, very flexible QuickBase API for Node.js</div>",
+            "url": "https://github.com/tflanagan/node-quickbase",
+            "title": "tflanagan/node-quickbase: A lightweight, very flexible QuickBase API for Node.js",
+            "date_modified": "2022-12-09T04:48:07.000Z",
+            "date_published": "2014-05-21T21:23:51.000Z",
+            "author": {
+                "name": "tflanagan",
+                "url": "https://github.com/tflanagan"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/37078161?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight typescript library to verify a cip30 datasignature</div>",
+            "url": "https://github.com/cardano-foundation/cardano-verify-datasignature",
+            "title": "cardano-foundation/cardano-verify-datasignature: A lightweight typescript library to verify a cip30 datasignature",
+            "date_modified": "2022-12-12T16:49:28.000Z",
+            "date_published": "2022-11-09T13:04:43.000Z",
+            "author": {
+                "name": "cardano-foundation",
+                "url": "https://github.com/cardano-foundation"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/682348?u=138e22bd28ee4e9032032224a2269200c77c26fb&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A monorepo of lightweight Node.js modules providing foundational functionality in a generic format.</div>",
+            "url": "https://github.com/Kruithne/kogs",
+            "title": "Kruithne/kogs: A monorepo of lightweight Node.js modules providing foundational functionality in a generic format.",
+            "date_modified": "2022-11-23T21:48:55.000Z",
+            "date_published": "2022-11-15T21:51:04.000Z",
+            "author": {
+                "name": "Kruithne",
+                "url": "https://github.com/Kruithne"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/1308397?u=945dc6b97571e2b98b659d34b1c81ae2514046bf&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>A lightweight, robust, and elegant syntax highlighting component for your next React apps.</div>",
+            "url": "https://github.com/Bunlong/next-prism",
+            "title": "Bunlong/next-prism: A lightweight, robust, and elegant syntax highlighting component for your next React apps.",
+            "date_modified": "2022-12-11T23:42:54.000Z",
+            "date_published": "2021-08-09T08:22:53.000Z",
+            "author": {
+                "name": "Bunlong",
+                "url": "https://github.com/Bunlong"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/80154025?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div><g-emoji class=\"g-emoji\" alias=\"deciduous_tree\" fallback-src=\"https://github.githubassets.com/images/icons/emoji/unicode/1f333.png\">🌳</g-emoji> Lightweight and fast router for JavaScript based on Radix Tree</div>",
+            "url": "https://github.com/unjs/radix3",
+            "title": "unjs/radix3: 🌳 Lightweight and fast router for JavaScript based on Radix Tree",
+            "date_modified": "2022-12-09T00:31:51.000Z",
+            "date_published": "2021-11-24T23:02:09.000Z",
+            "author": {
+                "name": "unjs",
+                "url": "https://github.com/unjs"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/96818428?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>Lightweight reusable Web3 UI components for dapps. </div>",
+            "url": "https://github.com/web3ui/web3uikit",
+            "title": "web3ui/web3uikit: Lightweight reusable Web3 UI components for dapps. ",
+            "date_modified": "2022-12-11T18:35:29.000Z",
+            "date_published": "2021-12-29T09:10:21.000Z",
+            "author": {
+                "name": "web3ui",
+                "url": "https://github.com/web3ui"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/53572196?u=b22d255f47150f37961552defcf4480607df9b7f&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div><g-emoji class=\"g-emoji\" alias=\"sunny\" fallback-src=\"https://github.githubassets.com/images/icons/emoji/unicode/2600.png\">☀</g-emoji>A simple, lightweight UI component library for Vue3.</div>",
+            "url": "https://github.com/valcosmos/valtify",
+            "title": "valcosmos/valtify: ☀A simple, lightweight UI component library for Vue3.",
+            "date_modified": "2022-09-20T13:47:26.000Z",
+            "date_published": "2022-07-24T09:31:06.000Z",
+            "author": {
+                "name": "valcosmos",
+                "url": "https://github.com/valcosmos"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/80154025?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>Lightweight file-to-file transpiler.</div>",
+            "url": "https://github.com/unjs/mkdist",
+            "title": "unjs/mkdist: Lightweight file-to-file transpiler.",
+            "date_modified": "2022-12-09T11:53:21.000Z",
+            "date_published": "2021-01-14T11:51:37.000Z",
+            "author": {
+                "name": "unjs",
+                "url": "https://github.com/unjs"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/12165287?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>SRS Cloud is a lightweight open-source video cloud based on Nodejs, SRS, FFmpeg, WebRTC, etc.</div>",
+            "url": "https://github.com/ossrs/srs-cloud",
+            "title": "ossrs/srs-cloud: SRS Cloud is a lightweight open-source video cloud based on Nodejs, SRS, FFmpeg, WebRTC, etc.",
+            "date_modified": "2022-12-12T15:20:29.000Z",
+            "date_published": "2022-01-06T14:24:09.000Z",
+            "author": {
+                "name": "ossrs",
+                "url": "https://github.com/ossrs"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/17209386?u=d1d1d859ca21ecba526000dbf8bc43a159280fad&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>MockchainJS is a lightweight, simple blockchain-inspired ledger that allows users easily and quickly achieve blockchain-like behavior for NodeJS.</div>",
+            "url": "https://github.com/andriikopp/mockchain-js",
+            "title": "andriikopp/mockchain-js: MockchainJS is a lightweight, simple blockchain-inspired ledger that allows users easily and quickly achieve blockchain-like behavior for NodeJS.",
+            "date_modified": "2022-12-11T15:45:05.000Z",
+            "date_published": "2022-12-11T15:43:52.000Z",
+            "author": {
+                "name": "andriikopp",
+                "url": "https://github.com/andriikopp"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/85643862?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><div>ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.</div>",
+            "url": "https://github.com/ArmCord/ArmCord",
+            "title": "ArmCord/ArmCord: ArmCord is a custom client designed to enhance your Discord experience while keeping everything lightweight.",
+            "date_modified": "2022-12-12T13:11:55.000Z",
+            "date_published": "2020-11-16T13:33:38.000Z",
+            "author": {
+                "name": "ArmCord",
+                "url": "https://github.com/ArmCord"
+            }
+        }
+    ]
+}
