@@ -13,7 +13,7 @@ const BASE_URL = "https://bensheldon.github.io/github-search-rss";
 export const SEARCH_ITEMS: RSSItem[] = [
     {
         title: "rails/rails: Issues containing 'ActiveJob Job'",
-        query: "ActiveJob Job repo:rails/rails is:issue",
+        query: "ActiveJob Job repo:rails/rails",
         TYPE: "ISSUE",
         link: `${BASE_URL}/rails-activejob.json`,
         homepage: "https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&type=Issues",
