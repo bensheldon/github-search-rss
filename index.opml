@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><opml version="2.0">
     <head>
     <title>GitHub Search Subscriptions</title>
-    <dateCreated>2022-12-12T17:24:40.302Z</dateCreated>
+    <dateCreated>2022-12-13T00:08:22.232Z</dateCreated>
 </head>
     <body>
     <outline title="Subscriptions">
         <outline>
-            <outline type="rss" title="microsoft/TypeScript Iteration Plan" htmlUrl="https://azu.github.io/github-search-rss/typescript-iterator-plan.json" xmlUrl="https://azu.github.io/github-search-rss/typescript-iterator-plan.json"/>
-            <outline type="rss" title="w3ctag/design-reviews Design Issues" htmlUrl="https://azu.github.io/github-search-rss/w3ctag-design-reviews.json" xmlUrl="https://azu.github.io/github-search-rss/w3ctag-design-reviews.json"/>
-            <outline type="rss" title="npm/rfcs Issues" htmlUrl="https://azu.github.io/github-search-rss/npm-rfcs.json" xmlUrl="https://azu.github.io/github-search-rss/npm-rfcs.json"/>
-            <outline type="rss" title="npm/statusboard Issues" htmlUrl="https://azu.github.io/github-search-rss/npm-statusboard.json" xmlUrl="https://azu.github.io/github-search-rss/npm-statusboard.json"/>
-            <outline type="rss" title="github/roadmap Issues" htmlUrl="https://azu.github.io/github-search-rss/github-roadmap.json" xmlUrl="https://azu.github.io/github-search-rss/github-roadmap.json"/>
-            <outline type="rss" title="mozilla/standards-positions Issues" htmlUrl="https://azu.github.io/github-search-rss/mozilla-standards-positions.json" xmlUrl="https://azu.github.io/github-search-rss/mozilla-standards-positions.json"/>
-            <outline type="rss" title="WebKit/standards-positions Issues" htmlUrl="https://azu.github.io/github-search-rss/WebKit-standards-positions.json" xmlUrl="https://azu.github.io/github-search-rss/WebKit-standards-positions.json"/>
-            <outline type="rss" title="org:wintercg Issues" htmlUrl="https://azu.github.io/github-search-rss/wintercg.json" xmlUrl="https://azu.github.io/github-search-rss/wintercg.json"/>
-            <outline type="rss" title="repo:babel/proposals Issues" htmlUrl="https://azu.github.io/github-search-rss/babel-proposals.json" xmlUrl="https://azu.github.io/github-search-rss/babel-proposals.json"/>
-            <outline type="rss" title="mdn/browser-compat-data update data" htmlUrl="https://azu.github.io/github-search-rss/mdn-browser-compat-data.json" xmlUrl="https://azu.github.io/github-search-rss/mdn-browser-compat-data.json"/>
-            <outline type="rss" title="mdn/content update content" htmlUrl="https://azu.github.io/github-search-rss/mdn-content.json" xmlUrl="https://azu.github.io/github-search-rss/mdn-content.json"/>
-            <outline type="rss" title="Node.js notable changes" htmlUrl="https://azu.github.io/github-search-rss/nodejs-notable.json" xmlUrl="https://azu.github.io/github-search-rss/nodejs-notable.json"/>
-            <outline type="rss" title="LightWeight JavaScript repositories" htmlUrl="https://azu.github.io/github-search-rss/lightweight-javascript-repo.json" xmlUrl="https://azu.github.io/github-search-rss/lightweight-javascript-repo.json"/>
+            <outline type="rss" title="rails/rails: Issues containing &apos;ActiveJob Job&apos;" htmlUrl="https://bensheldon.github.io/github-search-rss/rails-activejob.json" xmlUrl="https://bensheldon.github.io/github-search-rss/rails-activejob.json"/>
         </outline>
     </outline>
 </body>
