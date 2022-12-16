@@ -17,7 +17,14 @@ export const SEARCH_ITEMS: RSSItem[] = [
         TYPE: "ISSUE",
         link: `${BASE_URL}/rails-activejob.json`,
         homepage: "https://github.com/search?q=ActiveJob+Job+repo%3Arails%2Frails+is%3Aissue&type=Issues",
-    }
+    },
+    {
+        title: "rails/rails: Issues containing 'GoodJob'",
+        query: "GoodJob repo:rails/rails",
+        TYPE: "ISSUE",
+        link: `${BASE_URL}/rails-goodjob.json`,
+        homepage: "https://github.com/search?q=GoodJob+repo%3Arails%2Frails&type=Issues",
+    },
 
     // // Issue
     // {
