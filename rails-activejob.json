@@ -6,17 +6,6 @@
     "description": "rails/rails: Issues containing 'ActiveJob Job' on GitHub",
     "items": [
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/35404?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">This PR implements <code class=\"notranslate\">provider_job_id</code> for the Beanstalk ActiveJob QueueAdapter.</p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Changes that are unrelated should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
-            "url": "https://github.com/rails/rails/pull/47732",
-            "title": "implement `provider_job_id` for Backburner jobs",
-            "date_modified": "2023-03-24T01:20:27.000Z",
-            "date_published": "2023-03-22T06:58:34.000Z",
-            "author": {
-                "name": "cmatheson",
-                "url": "https://github.com/cmatheson"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/99586?u=b4abd791d83e768c72cb832147b4a210caecf47d&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Steps to reproduce</h3>\n<p dir=\"auto\">Run a job with retry attempt 1. The won't be retried.</p>\n<div class=\"highlight highlight-source-ruby notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"class FooJob &lt; ApplicationJob\n  class FooError &lt; StandardError; end\n\n  retry_on FooError, attempts: 1\n\n  def perform\n    raise FooError\n  end\nend\"><pre class=\"notranslate\"><span class=\"pl-k\">class</span> <span class=\"pl-v\">FooJob</span> &lt; <span class=\"pl-v\">ApplicationJob</span>\n  <span class=\"pl-k\">class</span> <span class=\"pl-v\">FooError</span> &lt; <span class=\"pl-v\">StandardError</span><span class=\"pl-kos\">;</span> <span class=\"pl-k\">end</span>\n\n  <span class=\"pl-en\">retry_on</span> <span class=\"pl-v\">FooError</span><span class=\"pl-kos\">,</span> <span class=\"pl-pds\">attempts</span>: <span class=\"pl-c1\">1</span>\n\n  <span class=\"pl-k\">def</span> <span class=\"pl-en\">perform</span>\n    <span class=\"pl-en\">raise</span> <span class=\"pl-v\">FooError</span>\n  <span class=\"pl-k\">end</span>\n<span class=\"pl-k\">end</span></pre></div>\n<h3 dir=\"auto\">Expected behavior</h3>\n<p dir=\"auto\">ActiveJob should retry at most the number of times specified by the attempts option.</p>\n<h3 dir=\"auto\">Actual behavior</h3>\n<p dir=\"auto\"><code class=\"notranslate\">attempts: 0</code>: runs once, no retry<br>\n<code class=\"notranslate\">attempts: 1</code>: runs once, no retry<br>\n<code class=\"notranslate\">attempts: 2</code>: runs once, one retry<br>\n<code class=\"notranslate\">attempts: 3</code>: runs once, two retries</p>\n<p dir=\"auto\">The behavior is not consistent. We can either change the behavior to be consistent (won't happen?) or at least document it very clearly.</p>\n<p dir=\"auto\"><a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"358130415\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/33816\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/33816/hovercard\" href=\"https://github.com/rails/rails/issues/33816\">#33816</a> also pointed out the problem.</p>\n<h3 dir=\"auto\">System configuration</h3>\n<p dir=\"auto\"><strong>Rails version</strong>: Rails 7.0.4</p>\n<p dir=\"auto\"><strong>Ruby version</strong>: ruby 3.1.1p18 (2022-02-18 revision 53f5fc4236) [x86_64-linux]</p>",
             "url": "https://github.com/rails/rails/issues/46419",
             "title": "ActiveJob's retry behavior is not consistent",
@@ -102,6 +91,17 @@
             "author": {
                 "name": "seanpdoyle",
                 "url": "https://github.com/seanpdoyle"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/35404?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">This PR implements <code class=\"notranslate\">provider_job_id</code> for the Beanstalk ActiveJob QueueAdapter.</p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Changes that are unrelated should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
+            "url": "https://github.com/rails/rails/pull/47732",
+            "title": "implement `provider_job_id` for Backburner jobs",
+            "date_modified": "2023-03-25T15:21:41.000Z",
+            "date_published": "2023-03-22T06:58:34.000Z",
+            "author": {
+                "name": "cmatheson",
+                "url": "https://github.com/cmatheson"
             }
         },
         {
