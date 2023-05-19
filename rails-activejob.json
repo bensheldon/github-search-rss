@@ -31,7 +31,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/16636757?u=27830160a8177896eb66623c0a9b730015a2aae0&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Currently, we don't document the use case for ActiveJob's <code class=\"notranslate\">queue_with_priority</code> block arguments. It seems necessary to document them in the API docs as well considering how useful this option is.</p>",
             "url": "https://github.com/rails/rails/pull/48099",
             "title": "Document queue_with_priority block arguments and their use [ci skip]",
-            "date_modified": "2023-05-17T13:37:25.000Z",
+            "date_modified": "2023-05-18T07:51:21.000Z",
             "date_published": "2023-04-30T06:51:33.000Z",
             "author": {
                 "name": "shivamsinghchahar",
