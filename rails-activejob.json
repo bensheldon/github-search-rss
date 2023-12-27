@@ -42,7 +42,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/6014046?u=3972bfb97451f7f90e051df2e49fb7b8ee83e28d&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/>",
             "url": "https://github.com/rails/rails/pull/49854",
             "title": "Document ActiveJob::Base#logger and #log_arguments",
-            "date_modified": "2023-11-11T00:45:48.000Z",
+            "date_modified": "2023-12-26T17:36:40.000Z",
             "date_published": "2023-10-30T20:11:35.000Z",
             "author": {
                 "name": "skipkayhil",
