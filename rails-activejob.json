@@ -9,7 +9,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/204146?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Issue</h3>\n<p dir=\"auto\">The <code class=\"notranslate\">retry_job</code> method on ActiveJob jobs is basically a wrapper for <code class=\"notranslate\">enqueue</code>. Enqueue for Sidekiq just calls the factory for wrapping the ActiveJob job in a Sidekiq JobWrapper. (See<br>\n</p><div class=\"Box Box--condensed my-2\">\n  <div class=\"Box-header f6\">\n    <p class=\"mb-0 text-bold\">\n      <a href=\"https://github.com/rails/rails/blob/babad404a9ae563fff7aa624859845772a4de4b6/activejob/lib/active_job/queue_adapters/sidekiq_adapter.rb#L22\">rails/activejob/lib/active_job/queue_adapters/sidekiq_adapter.rb</a>\n    </p>\n    <p class=\"mb-0 color-fg-muted\">\n         Line 22\n      in\n      <a data-pjax=\"true\" class=\"commit-tease-sha Link--inTextBlock\" href=\"/rails/rails/commit/babad404a9ae563fff7aa624859845772a4de4b6\">babad40</a>\n    </p>\n  </div>\n  <div itemprop=\"text\" class=\"Box-body p-0 blob-wrapper blob-wrapper-embedded data\">\n    <table class=\"highlight tab-size mb-0 js-file-line-container\" data-tab-size=\"8\" data-paste-markdown-skip=\"\">\n\n        <tbody><tr class=\"border-0\">\n          <td id=\"L22\" class=\"blob-num border-0 px-3 py-0 color-bg-default\" data-line-number=\"22\"></td>\n          <td id=\"LC22\" class=\"blob-code border-0 px-3 py-0 color-bg-default blob-code-inner js-file-line\"> <span class=\"pl-s1\">job</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">provider_job_id</span> <span class=\"pl-c1\">=</span> <span class=\"pl-v\">JobWrapper</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">set</span><span class=\"pl-kos\">(</span> </td>\n        </tr>\n    </tbody></table>\n  </div>\n</div>\n).<p></p>\n<p dir=\"auto\">The issue is that when that happens, it is effectively a completely new Sidekiq job. Several of the attributes of the originating ActiveJob instance get passed into a <code class=\"notranslate\">set</code> on that Sidekiq job, but the provider_job_id is not one of them.</p>\n<h3 dir=\"auto\">Expected behavior</h3>\n<p dir=\"auto\"><code class=\"notranslate\">retry_job</code> should result in the job having the same <code class=\"notranslate\">provider_job_id</code> as it did before the retry.</p>\n<h3 dir=\"auto\">Actual behavior</h3>\n<p dir=\"auto\">'retry_job' results in a change to the <code class=\"notranslate\">provider_job_id</code> every time.</p>\n<h3 dir=\"auto\">System configuration</h3>\n<p dir=\"auto\"><strong>Rails version</strong>:<br>\n7.1.2</p>\n<p dir=\"auto\"><strong>Ruby version</strong>:<br>\n3.2.2</p>",
             "url": "https://github.com/rails/rails/issues/51003",
             "title": "Sidekiq ActiveJob adapter resets provider_job_id on with retry_job",
-            "date_modified": "2024-02-08T15:47:55.000Z",
+            "date_modified": "2024-02-09T00:26:41.000Z",
             "date_published": "2024-02-07T17:38:09.000Z",
             "author": {
                 "name": "nhorton",
@@ -80,6 +80,17 @@
             "author": {
                 "name": "ghiculescu",
                 "url": "https://github.com/ghiculescu"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/1966473?u=fe117732163d3610f051fca80df4e04c1b91335d&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h2 dir=\"auto\">Overview</h2>\n<p dir=\"auto\">Add documentation related to <code class=\"notranslate\">perform_all_later</code> for bulk enqueuing jobs.</p>\n<h2 dir=\"auto\">Testing</h2>\n<p dir=\"auto\">Tested the new method in-app using sidekiq locally. Also tested documentation by running <code class=\"notranslate\">guides:generate</code>, <code class=\"notranslate\">guides:validate</code> and <code class=\"notranslate\">guides:lint</code> locally.</p>",
+            "url": "https://github.com/rails/rails/pull/51004",
+            "title": "[RF DOCS] Add documentation for `perform_all_later` to Active Job Basics guide [ci-skip]",
+            "date_modified": "2024-02-09T16:18:21.000Z",
+            "date_published": "2024-02-07T19:27:15.000Z",
+            "author": {
+                "name": "bhumi1102",
+                "url": "https://github.com/bhumi1102"
             }
         },
         {
@@ -212,17 +223,6 @@
             "author": {
                 "name": "jonathanhefner",
                 "url": "https://github.com/jonathanhefner"
-            }
-        },
-        {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/8219340?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Summary</h3>\n\n<p dir=\"auto\">ActiveJob serializes <code class=\"notranslate\">Symbol</code> <code class=\"notranslate\">Hash</code> keys by stringifying them, and storing an array of keys to be symbolized on deserialization as <code class=\"notranslate\">_aj_symbol_keys</code>. This means that if a <code class=\"notranslate\">Hash</code> has both <code class=\"notranslate\">Symbol</code> and <code class=\"notranslate\">String</code> keys with the same contents, they will collide.</p>\n<p dir=\"auto\">Specifically, the resulting hash ends up containing only a pair consisting of:</p>\n<ul dir=\"auto\">\n<li>the symbol key</li>\n<li>the last value</li>\n</ul>\n<p dir=\"auto\">This PR adds a check for this and logs a deprecation warning. It also introduces a setting to <code class=\"notranslate\">raise</code> instead of logging the warning, with the intention of making this behavior the default in Rails 7.2/8.0.</p>\n<h3 dir=\"auto\">Other Information</h3>\n\n\n<p dir=\"auto\">I have left a number of placeholders for the time being, because I wanted to get initial review and confirm we want to do this, before investing the time to write the docs, deprecation message, changelog, etc.</p>\n<hr>\n<p dir=\"auto\">cc. <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Mangara/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Mangara\">@Mangara</a>, who mentioned this in Slack</p>",
-            "url": "https://github.com/rails/rails/pull/45676",
-            "title": "Detect colliding keys in Active Job Hash serialization",
-            "date_modified": "2022-07-28T07:38:01.000Z",
-            "date_published": "2022-07-28T07:37:57.000Z",
-            "author": {
-                "name": "sambostock",
-                "url": "https://github.com/sambostock"
             }
         }
     ]
