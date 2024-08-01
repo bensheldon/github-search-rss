@@ -182,17 +182,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2741?u=ce0dd0173c534e7e8b72e1cb393fed76e904a91c&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/basecamp/solid_queue\">Solid Queue</a> should be the default Active Job backend for Rails 8 since it supports all our major databases and enables someone to run jobs in production without either additional dependencies (like Redis), using database-specific backends (like Good Job), or using commercially-restrained backends (like Sidekiq).</p>\n<p dir=\"auto\">The necessary tables should be setup by default as part of rails new. The user should not have to do any configuration whatsoever to be able to deploy their application in production with Solid Queue as the job runner. We also need to figure out a standardized setup for running the worker jobs, especially as part of the default Dockerfile setup.</p>\n<p dir=\"auto\">You should be able to avoid this using <code class=\"notranslate\">--skip-solid-queue</code> or just <code class=\"notranslate\">--skip-solid</code>.</p>\n<p dir=\"auto\">cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/rosa/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/rosa\">@rosa</a></p>",
-            "url": "https://github.com/rails/rails/issues/50442",
-            "title": "Solid Queue should be the default Active Job backend for Rails 8",
-            "date_modified": "2024-07-18T14:40:55.000Z",
-            "date_published": "2023-12-26T22:04:32.000Z",
-            "author": {
-                "name": "dhh",
-                "url": "https://github.com/dhh"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/8219340?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Summary</h3>\n\n<p dir=\"auto\">ActiveJob serializes <code class=\"notranslate\">Symbol</code> <code class=\"notranslate\">Hash</code> keys by stringifying them, and storing an array of keys to be symbolized on deserialization as <code class=\"notranslate\">_aj_symbol_keys</code>. This means that if a <code class=\"notranslate\">Hash</code> has both <code class=\"notranslate\">Symbol</code> and <code class=\"notranslate\">String</code> keys with the same contents, they will collide.</p>\n<p dir=\"auto\">Specifically, the resulting hash ends up containing only a pair consisting of:</p>\n<ul dir=\"auto\">\n<li>the symbol key</li>\n<li>the last value</li>\n</ul>\n<p dir=\"auto\">This PR adds a check for this and logs a deprecation warning. It also introduces a setting to <code class=\"notranslate\">raise</code> instead of logging the warning, with the intention of making this behavior the default in Rails 7.2/8.0.</p>\n<h3 dir=\"auto\">Other Information</h3>\n\n\n<p dir=\"auto\">I have left a number of placeholders for the time being, because I wanted to get initial review and confirm we want to do this, before investing the time to write the docs, deprecation message, changelog, etc.</p>\n<hr>\n<p dir=\"auto\">cc. <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Mangara/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Mangara\">@Mangara</a>, who mentioned this in Slack</p>",
             "url": "https://github.com/rails/rails/pull/45676",
             "title": "Detect colliding keys in Active Job Hash serialization",
@@ -201,6 +190,17 @@
             "author": {
                 "name": "sambostock",
                 "url": "https://github.com/sambostock"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2741?u=ce0dd0173c534e7e8b72e1cb393fed76e904a91c&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/basecamp/solid_queue\">Solid Queue</a> should be the default Active Job backend for Rails 8 since it supports all our major databases and enables someone to run jobs in production without either additional dependencies (like Redis), using database-specific backends (like Good Job), or using commercially-restrained backends (like Sidekiq).</p>\n<p dir=\"auto\">The necessary tables should be setup by default as part of rails new. The user should not have to do any configuration whatsoever to be able to deploy their application in production with Solid Queue as the job runner. We also need to figure out a standardized setup for running the worker jobs, especially as part of the default Dockerfile setup.</p>\n<p dir=\"auto\">You should be able to avoid this using <code class=\"notranslate\">--skip-solid-queue</code> or just <code class=\"notranslate\">--skip-solid</code>.</p>\n<p dir=\"auto\">cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/rosa/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/rosa\">@rosa</a></p>",
+            "url": "https://github.com/rails/rails/issues/50442",
+            "title": "Solid Queue should be the default Active Job backend for Rails 8",
+            "date_modified": "2024-07-18T14:40:55.000Z",
+            "date_published": "2023-12-26T22:04:32.000Z",
+            "author": {
+                "name": "dhh",
+                "url": "https://github.com/dhh"
             }
         },
         {
