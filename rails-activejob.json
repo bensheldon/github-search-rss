@@ -28,6 +28,17 @@
             }
         },
         {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/7427365?u=67ed8ab4a2204734e6d97e9ebbe4a963512a0fda&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/jondot/sneakers?tab=readme-ov-file#sneakers-has-a-new-home-and-a-new-name\"><code class=\"notranslate\">sneakers</code> gem development</a> has been moved to <a href=\"https://github.com/ruby-amqp/kicks\">kicks gem</a></p>\n<p dir=\"auto\">Connected to <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a></p>",
+            "url": "https://github.com/rails/rails/pull/53335",
+            "title": "Deprecate built-in snekaers adapter",
+            "date_modified": "2024-10-20T12:03:30.000Z",
+            "date_published": "2024-10-16T11:40:40.000Z",
+            "author": {
+                "name": "dixpac",
+                "url": "https://github.com/dixpac"
+            }
+        },
+        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/803765?u=1068ad3fe7323acb63e9fe65e558ba0aabe5d3fe&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">I realized that retrying a job from GoodJob would enqueue it in the current locale of the GoodJob dashboard, even if the job was originally enqueued in a different locale.</p>\n<p dir=\"auto\">For instance, it was enqueued in <code class=\"notranslate\">:fr</code>, and failed. When I retried it from the dashboard that was in <code class=\"notranslate\">:en</code>, it was enqueued with an <code class=\"notranslate\">:en</code> locale ( I noticed it because it failed again with a missing translation error)</p>\n<p dir=\"auto\">I tracked it down to the <code class=\"notranslate\">serialize</code> method of <code class=\"notranslate\">ActiveJob</code> who always sets <code class=\"notranslate\">locale</code> from <code class=\"notranslate\">I18n.locale</code></p>\n<p dir=\"auto\">This PR changes the serialize method to actually return the original local from the job if it is set, and default to the current locale if not.</p>",
             "url": "https://github.com/rails/rails/pull/52121",
             "title": "Include the actual ActiveJob locale when serializing rather than I18n locale",
@@ -212,17 +223,6 @@
             "author": {
                 "name": "Earlopain",
                 "url": "https://github.com/Earlopain"
-            }
-        },
-        {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/8219340?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Summary</h3>\n\n<p dir=\"auto\">ActiveJob serializes <code class=\"notranslate\">Symbol</code> <code class=\"notranslate\">Hash</code> keys by stringifying them, and storing an array of keys to be symbolized on deserialization as <code class=\"notranslate\">_aj_symbol_keys</code>. This means that if a <code class=\"notranslate\">Hash</code> has both <code class=\"notranslate\">Symbol</code> and <code class=\"notranslate\">String</code> keys with the same contents, they will collide.</p>\n<p dir=\"auto\">Specifically, the resulting hash ends up containing only a pair consisting of:</p>\n<ul dir=\"auto\">\n<li>the symbol key</li>\n<li>the last value</li>\n</ul>\n<p dir=\"auto\">This PR adds a check for this and logs a deprecation warning. It also introduces a setting to <code class=\"notranslate\">raise</code> instead of logging the warning, with the intention of making this behavior the default in Rails 7.2/8.0.</p>\n<h3 dir=\"auto\">Other Information</h3>\n\n\n<p dir=\"auto\">I have left a number of placeholders for the time being, because I wanted to get initial review and confirm we want to do this, before investing the time to write the docs, deprecation message, changelog, etc.</p>\n<hr>\n<p dir=\"auto\">cc. <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/Mangara/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/Mangara\">@Mangara</a>, who mentioned this in Slack</p>",
-            "url": "https://github.com/rails/rails/pull/45676",
-            "title": "Detect colliding keys in Active Job Hash serialization",
-            "date_modified": "2022-07-28T07:38:01.000Z",
-            "date_published": "2022-07-28T07:37:57.000Z",
-            "author": {
-                "name": "sambostock",
-                "url": "https://github.com/sambostock"
             }
         }
     ]
