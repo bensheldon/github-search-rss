@@ -204,17 +204,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/7427365?u=67ed8ab4a2204734e6d97e9ebbe4a963512a0fda&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/jondot/sneakers?tab=readme-ov-file#sneakers-has-a-new-home-and-a-new-name\"><code class=\"notranslate\">sneakers</code> gem development</a> has been moved to <a href=\"https://github.com/ruby-amqp/kicks\">kicks gem</a></p>\n<p dir=\"auto\">Connected to <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a></p>",
-            "url": "https://github.com/rails/rails/pull/53335",
-            "title": "Deprecate built-in snekaers adapter",
-            "date_modified": "2024-11-02T11:05:31.000Z",
-            "date_published": "2024-10-16T11:40:40.000Z",
-            "author": {
-                "name": "dixpac",
-                "url": "https://github.com/dixpac"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/107635?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">I've been stuck on a failing test about a job that was supposed to be rescued from exceptions, and after an embarrassing amount of time I came to realise that using <code class=\"notranslate\">perform</code> shortcuts all of the ActiveJob niceties.</p>\n<p dir=\"auto\">This Pull Request has been created because I don't want other people to confuse the <code class=\"notranslate\">perform</code>, <code class=\"notranslate\">perform_now</code> or <code class=\"notranslate\">perform_later</code> altogether and waste valuable time trying to understand why the first one doesn't behave like the two others.</p>\n<p dir=\"auto\">Feel free to challenge the wording as you please ✌️</p>\n<h3 dir=\"auto\">Detail</h3>\n<p dir=\"auto\">This Pull Request changes the ActiveJob guide.</p>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Changes that are unrelated should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/49301",
             "title": "[ci skip] clarify the benefits of using ActiveJob's execution wrappers",
@@ -223,6 +212,17 @@
             "author": {
                 "name": "freesteph",
                 "url": "https://github.com/freesteph"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/7427365?u=67ed8ab4a2204734e6d97e9ebbe4a963512a0fda&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/jondot/sneakers?tab=readme-ov-file#sneakers-has-a-new-home-and-a-new-name\"><code class=\"notranslate\">sneakers</code> gem development</a> has been moved to <a href=\"https://github.com/ruby-amqp/kicks\">kicks gem</a></p>\n<p dir=\"auto\">Connected to <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a></p>",
+            "url": "https://github.com/rails/rails/pull/53335",
+            "title": "Deprecate built-in snekaers adapter",
+            "date_modified": "2024-11-02T11:05:31.000Z",
+            "date_published": "2024-10-16T11:40:40.000Z",
+            "author": {
+                "name": "dixpac",
+                "url": "https://github.com/dixpac"
             }
         }
     ]
