@@ -127,17 +127,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5657035?u=48dc5950e98b199e1ed1e8c5c3f1e4bfd2b39691&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Reference <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a>.</p>\n<p dir=\"auto\">Opening this to not miss out.</p>\n<p dir=\"auto\">The next sidekiq release will add an Active Job adapter by default - <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2527248131\" data-permission-text=\"Title is private\" data-url=\"https://github.com/sidekiq/sidekiq/issues/6430\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/sidekiq/sidekiq/pull/6430/hovercard\" href=\"https://github.com/sidekiq/sidekiq/pull/6430\">sidekiq/sidekiq#6430</a>.</p>",
-            "url": "https://github.com/rails/rails/pull/53058",
-            "title": "Deprecate built-in `sidekiq` adapter",
-            "date_modified": "2024-10-24T08:45:04.000Z",
-            "date_published": "2024-09-26T21:03:43.000Z",
-            "author": {
-                "name": "fatkodima",
-                "url": "https://github.com/fatkodima"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/75187597?u=97791928a7e78e7a393a98d42708cdcf71545238&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">ActiveJob produces a large amount of log noise, because errors that are emitted from ActiveJob don't have the standard Rails BacktraceCleaner applied. This is especially apparent when using Sorbet for Ruby types, since each application method call is wrapped by multiple Sorbet typechecking functions. My application's activejob error backtraces would typically log 4 non-relevant Sorbet function calls for each application function call. My workaround has been to monkey-patch Rails in our application. However, it seems to make sense to simply bring this behavior into ActiveJob as the default, as the backtrace cleaner is a pretty standard piece of Rails machinery that is used for most other backtraces in Rails.</p>\n<h3 dir=\"auto\">Additional information</h3>\n<p dir=\"auto\">When ActiveJob encounters an error performing a job, rather than printing the full unfiltered (and noisy) exception backtrace, print the cleaned backtrace using Rails's BacktraceCleaner.</p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Changes that are unrelated should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CI is passing.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/46555",
             "title": "Small PR: Apply Rails backtrace cleaner to ActiveJob backtrace printout",
@@ -149,6 +138,17 @@
             }
         },
         {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/5657035?u=48dc5950e98b199e1ed1e8c5c3f1e4bfd2b39691&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Reference <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a>.</p>\n<p dir=\"auto\">Opening this to not miss out.</p>\n<p dir=\"auto\">The next sidekiq release will add an Active Job adapter by default - <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2527248131\" data-permission-text=\"Title is private\" data-url=\"https://github.com/sidekiq/sidekiq/issues/6430\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/sidekiq/sidekiq/pull/6430/hovercard\" href=\"https://github.com/sidekiq/sidekiq/pull/6430\">sidekiq/sidekiq#6430</a>.</p>",
+            "url": "https://github.com/rails/rails/pull/53058",
+            "title": "Deprecate built-in `sidekiq` adapter",
+            "date_modified": "2024-10-24T08:45:04.000Z",
+            "date_published": "2024-09-26T21:03:43.000Z",
+            "author": {
+                "name": "fatkodima",
+                "url": "https://github.com/fatkodima"
+            }
+        },
+        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/94129?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">On latest main, tests for an application of mine reliably stall locally and in CI. Sometimes warnings like the following are printed:</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"WARNING:  there is already a transaction in progress\nmessage type 0x43 arrived from server while idle\nmessage type 0x5a arrived from server while idle\"><pre class=\"notranslate\"><code class=\"notranslate\">WARNING:  there is already a transaction in progress\nmessage type 0x43 arrived from server while idle\nmessage type 0x5a arrived from server while idle\n</code></pre></div>\n<p dir=\"auto\">Environment:</p>\n<ul dir=\"auto\">\n<li>\n<p dir=\"auto\">The app uses a single Postgres DB and AR’s Postgres adapter.</p>\n</li>\n<li>\n<p dir=\"auto\">It uses RSpec and FactoryBot, not Minitest or AR fixtures.</p>\n<div class=\"snippet-clipboard-content notranslate position-relative overflow-auto\" data-snippet-clipboard-copy-content=\"rspec-core (3.12.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-expectations (3.12.0)\n  diff-lcs (&gt;= 1.2.0, &lt; 2.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-mocks (3.12.0)\n  diff-lcs (&gt;= 1.2.0, &lt; 2.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-rails (6.0.1)\n  actionpack (&gt;= 6.1)\n  activesupport (&gt;= 6.1)\n  railties (&gt;= 6.1)\n  rspec-core (~&gt; 3.11)\n  rspec-expectations (~&gt; 3.11)\n  rspec-mocks (~&gt; 3.11)\n  rspec-support (~&gt; 3.11)\nrspec-support (3.12.0)\"><pre class=\"notranslate\"><code class=\"notranslate\">rspec-core (3.12.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-expectations (3.12.0)\n  diff-lcs (&gt;= 1.2.0, &lt; 2.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-mocks (3.12.0)\n  diff-lcs (&gt;= 1.2.0, &lt; 2.0)\n  rspec-support (~&gt; 3.12.0)\nrspec-rails (6.0.1)\n  actionpack (&gt;= 6.1)\n  activesupport (&gt;= 6.1)\n  railties (&gt;= 6.1)\n  rspec-core (~&gt; 3.11)\n  rspec-expectations (~&gt; 3.11)\n  rspec-mocks (~&gt; 3.11)\n  rspec-support (~&gt; 3.11)\nrspec-support (3.12.0)\n</code></pre></div>\n</li>\n<li>\n<p dir=\"auto\">It’s on Ruby 3.1.3.</p>\n</li>\n</ul>\n<p dir=\"auto\">A <code class=\"notranslate\">git bisect</code> pointed to <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/rails/rails/commit/1a2ca1920c62abdd08c809df1fa98fe0acf14bc3/hovercard\" href=\"https://github.com/rails/rails/commit/1a2ca1920c62abdd08c809df1fa98fe0acf14bc3\"><tt>1a2ca19</tt></a> (cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/byroot/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/byroot\">@byroot</a>). That change does seem relevant, but I haven’t been able to reproduce the issue in a minimal app yet. I’ve tried with both Minitest and RSpec.</p>\n<p dir=\"auto\">The tests usually stall in around the same place with the same seed, but not <em>exactly</em> the same place. And I looked at two stalled runs with different seeds that didn’t run any common tests before their stalls.</p>\n<p dir=\"auto\">This has been difficult to pin down so far but I will keep looking.</p>",
             "url": "https://github.com/rails/rails/issues/46797",
             "title": "Active Job async adapter may use connections without a lease",
@@ -157,6 +157,17 @@
             "author": {
                 "name": "georgeclaghorn",
                 "url": "https://github.com/georgeclaghorn"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/14981592?u=11406fb0121b15a93b3305388377a57b4d9c96f9&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">A few things:</p>\n<ul dir=\"auto\">\n<li>Removal of <code class=\"notranslate\">delayed_job</code> in the <code class=\"notranslate\">Gemfile</code> causes a load error. CI is fine since this file is filtered out in the rake task</li>\n<li>The async adapter test assumes the async adapter to be present. Again not a problem on CI, but the default is the inline adapter</li>\n<li>Integration tests are run, they reference a job that is present only in the dummy app</li>\n</ul>\n<p dir=\"auto\"><code class=\"notranslate\">bin/test</code> is the documented mechanism for running tests of a single component: <a href=\"https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component\" rel=\"nofollow\">https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component</a></p>",
+            "url": "https://github.com/rails/rails/pull/53782",
+            "title": "Make ActiveJob tests runnable with `bin/test` again",
+            "date_modified": "2024-11-29T22:53:57.000Z",
+            "date_published": "2024-11-29T17:57:07.000Z",
+            "author": {
+                "name": "Earlopain",
+                "url": "https://github.com/Earlopain"
             }
         },
         {
@@ -212,17 +223,6 @@
             "author": {
                 "name": "Earlopain",
                 "url": "https://github.com/Earlopain"
-            }
-        },
-        {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/7427365?u=67ed8ab4a2204734e6d97e9ebbe4a963512a0fda&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><a href=\"https://github.com/jondot/sneakers?tab=readme-ov-file#sneakers-has-a-new-home-and-a-new-name\"><code class=\"notranslate\">sneakers</code> gem development</a> has been moved to <a href=\"https://github.com/ruby-amqp/kicks\">kicks gem</a></p>\n<p dir=\"auto\">Connected to <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"2526470615\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/52929\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/52929/hovercard\" href=\"https://github.com/rails/rails/issues/52929\">#52929</a></p>",
-            "url": "https://github.com/rails/rails/pull/53335",
-            "title": "Deprecate built-in snekaers adapter",
-            "date_modified": "2024-11-02T11:05:31.000Z",
-            "date_published": "2024-10-16T11:40:40.000Z",
-            "author": {
-                "name": "dixpac",
-                "url": "https://github.com/dixpac"
             }
         }
     ]
