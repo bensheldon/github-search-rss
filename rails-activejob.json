@@ -20,7 +20,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/295329?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">This Pull Request has been created because: I was reviewing a PR that used the callback chain halt technique but couldn't see any details in the ActiveJob docs on how these worked. I figure this change will be useful for someone else and avoid them having to read the source / other docs to find this info.</p>\n<h3 dir=\"auto\">Detail</h3>\n<p dir=\"auto\">This Pull Request changes the ActiveJob docs, to explain how job callback chain halting works. I coped the details from Active Record and provided a link to <a href=\"https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html\" rel=\"nofollow\">https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html</a> for more details.</p>\n<h3 dir=\"auto\">Additional information</h3>\n<p dir=\"auto\">Seems the main place rails docs the <a href=\"https://github.com/rails/rails/blob/a6dee8c5b1baffa0ac9e57016b90d8c88a8db1f6/activesupport/lib/active_support/callbacks.rb\">ActiveSupport callbacks</a> are in <a href=\"https://guides.rubyonrails.org/active_record_callbacks.html\" rel=\"nofollow\">https://guides.rubyonrails.org/active_record_callbacks.html</a>. There is some information in the <a href=\"https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html\" rel=\"nofollow\">ActiveSupport docs</a></p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Unrelated changes should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/53541",
             "title": "Update ActiveJob docs to show how to halt the callback chain",
-            "date_modified": "2024-11-06T20:27:26.000Z",
+            "date_modified": "2024-12-08T16:31:19.000Z",
             "date_published": "2024-11-05T23:54:27.000Z",
             "author": {
                 "name": "camallen",
@@ -193,17 +193,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/14981592?u=11406fb0121b15a93b3305388377a57b4d9c96f9&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">A few things:</p>\n<ul dir=\"auto\">\n<li>Removal of <code class=\"notranslate\">delayed_job</code> in the <code class=\"notranslate\">Gemfile</code> causes a load error. CI is fine since this file is filtered out in the rake task</li>\n<li>The async adapter test assumes the async adapter to be present. Again not a problem on CI, but the default is the inline adapter</li>\n<li>Integration tests are run, they reference a job that is present only in the dummy app</li>\n</ul>\n<p dir=\"auto\"><code class=\"notranslate\">bin/test</code> is the documented mechanism for running tests of a single component: <a href=\"https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component\" rel=\"nofollow\">https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component</a></p>",
-            "url": "https://github.com/rails/rails/pull/53782",
-            "title": "Make ActiveJob tests runnable with `bin/test` again",
-            "date_modified": "2024-11-29T22:53:57.000Z",
-            "date_published": "2024-11-29T17:57:07.000Z",
-            "author": {
-                "name": "Earlopain",
-                "url": "https://github.com/Earlopain"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/107635?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">I've been stuck on a failing test about a job that was supposed to be rescued from exceptions, and after an embarrassing amount of time I came to realise that using <code class=\"notranslate\">perform</code> shortcuts all of the ActiveJob niceties.</p>\n<p dir=\"auto\">This Pull Request has been created because I don't want other people to confuse the <code class=\"notranslate\">perform</code>, <code class=\"notranslate\">perform_now</code> or <code class=\"notranslate\">perform_later</code> altogether and waste valuable time trying to understand why the first one doesn't behave like the two others.</p>\n<p dir=\"auto\">Feel free to challenge the wording as you please ✌️</p>\n<h3 dir=\"auto\">Detail</h3>\n<p dir=\"auto\">This Pull Request changes the ActiveJob guide.</p>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> This Pull Request is related to one change. Changes that are unrelated should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/49301",
             "title": "[ci skip] clarify the benefits of using ActiveJob's execution wrappers",
@@ -212,6 +201,17 @@
             "author": {
                 "name": "freesteph",
                 "url": "https://github.com/freesteph"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/14981592?u=11406fb0121b15a93b3305388377a57b4d9c96f9&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">A few things:</p>\n<ul dir=\"auto\">\n<li>Removal of <code class=\"notranslate\">delayed_job</code> in the <code class=\"notranslate\">Gemfile</code> causes a load error. CI is fine since this file is filtered out in the rake task</li>\n<li>The async adapter test assumes the async adapter to be present. Again not a problem on CI, but the default is the inline adapter</li>\n<li>Integration tests are run, they reference a job that is present only in the dummy app</li>\n</ul>\n<p dir=\"auto\"><code class=\"notranslate\">bin/test</code> is the documented mechanism for running tests of a single component: <a href=\"https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component\" rel=\"nofollow\">https://guides.rubyonrails.org/contributing_to_ruby_on_rails.html#for-a-particular-component</a></p>",
+            "url": "https://github.com/rails/rails/pull/53782",
+            "title": "Make ActiveJob tests runnable with `bin/test` again",
+            "date_modified": "2024-11-29T22:53:57.000Z",
+            "date_published": "2024-11-29T17:57:07.000Z",
+            "author": {
+                "name": "Earlopain",
+                "url": "https://github.com/Earlopain"
             }
         },
         {
