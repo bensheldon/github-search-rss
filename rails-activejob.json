@@ -20,7 +20,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/277819?u=f88292414deeecfd67fee18ae9d7297bcc001138&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This is due to <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/sidekiq/sidekiq/commit/4d80a26/hovercard\" href=\"https://github.com/sidekiq/sidekiq/commit/4d80a26\">sidekiq/sidekiq@<tt>4d80a26</tt></a> changing the name used when queueing jobs.</p>\n<p dir=\"auto\">/cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yahonda/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yahonda\">@yahonda</a> <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/seuros/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/seuros\">@seuros</a></p>",
             "url": "https://github.com/rails/rails/pull/54991",
             "title": "Use updated Sidekiq wrapper class name in test",
-            "date_modified": "2025-06-03T13:46:38.000Z",
+            "date_modified": "2025-06-05T23:51:19.000Z",
             "date_published": "2025-04-29T13:35:57.000Z",
             "author": {
                 "name": "zzak",
