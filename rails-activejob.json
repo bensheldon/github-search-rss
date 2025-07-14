@@ -39,17 +39,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/277819?u=f88292414deeecfd67fee18ae9d7297bcc001138&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This is due to <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/sidekiq/sidekiq/commit/4d80a26/hovercard\" href=\"https://github.com/sidekiq/sidekiq/commit/4d80a26\">sidekiq/sidekiq@<tt>4d80a26</tt></a> changing the name used when queueing jobs.</p>\n<p dir=\"auto\">/cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yahonda/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yahonda\">@yahonda</a> <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/seuros/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/seuros\">@seuros</a></p>",
-            "url": "https://github.com/rails/rails/pull/54991",
-            "title": "Use updated Sidekiq wrapper class name in test",
-            "date_modified": "2025-06-05T23:51:19.000Z",
-            "date_published": "2025-04-29T13:35:57.000Z",
-            "author": {
-                "name": "zzak",
-                "url": "https://github.com/zzak"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/803765?u=1068ad3fe7323acb63e9fe65e558ba0aabe5d3fe&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">I realized that retrying a job from GoodJob would enqueue it in the current locale of the GoodJob dashboard, even if the job was originally enqueued in a different locale.</p>\n<p dir=\"auto\">For instance, it was enqueued in <code class=\"notranslate\">:fr</code>, and failed. When I retried it from the dashboard that was in <code class=\"notranslate\">:en</code>, it was enqueued with an <code class=\"notranslate\">:en</code> locale ( I noticed it because it failed again with a missing translation error)</p>\n<p dir=\"auto\">I tracked it down to the <code class=\"notranslate\">serialize</code> method of <code class=\"notranslate\">ActiveJob</code> who always sets <code class=\"notranslate\">locale</code> from <code class=\"notranslate\">I18n.locale</code></p>\n<p dir=\"auto\">This PR changes the serialize method to actually return the original local from the job if it is set, and default to the current locale if not.</p>",
             "url": "https://github.com/rails/rails/pull/52121",
             "title": "Include the actual ActiveJob locale when serializing rather than I18n locale",
@@ -58,6 +47,17 @@
             "author": {
                 "name": "Intrepidd",
                 "url": "https://github.com/Intrepidd"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/277819?u=f88292414deeecfd67fee18ae9d7297bcc001138&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This is due to <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/sidekiq/sidekiq/commit/4d80a26/hovercard\" href=\"https://github.com/sidekiq/sidekiq/commit/4d80a26\">sidekiq/sidekiq@<tt>4d80a26</tt></a> changing the name used when queueing jobs.</p>\n<p dir=\"auto\">/cc <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/yahonda/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/yahonda\">@yahonda</a> <a class=\"user-mention notranslate\" data-hovercard-type=\"user\" data-hovercard-url=\"/users/seuros/hovercard\" data-octo-click=\"hovercard-link-click\" data-octo-dimensions=\"link_type:self\" href=\"https://github.com/seuros\">@seuros</a></p>",
+            "url": "https://github.com/rails/rails/pull/54991",
+            "title": "Use updated Sidekiq wrapper class name in test",
+            "date_modified": "2025-06-05T23:51:19.000Z",
+            "date_published": "2025-04-29T13:35:57.000Z",
+            "author": {
+                "name": "zzak",
+                "url": "https://github.com/zzak"
             }
         },
         {
