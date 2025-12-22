@@ -215,14 +215,14 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/44640?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><span class=\"issue-keyword tooltipped tooltipped-se\" aria-label=\"This pull request closes pull request #56246.\">Fix</span>: <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"3673566144\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/56246\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/rails/rails/pull/56246/hovercard\" href=\"https://github.com/rails/rails/pull/56246\">#56246</a></p>\n<p dir=\"auto\">Opening a new PR, because the original author doesn't allow force push by maintainers.</p>",
-            "url": "https://github.com/rails/rails/pull/56264",
-            "title": "`ActiveJob.perform_all_later` should respect `job_class.enqueue_after_transaction_commit`",
-            "date_modified": "2025-12-01T08:32:21.000Z",
-            "date_published": "2025-12-01T08:23:10.000Z",
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/619324?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">See <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"916099836\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/42430\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/42430/hovercard\" href=\"https://github.com/rails/rails/issues/42430\">#42430</a></p>\n<p dir=\"auto\">There are two ways for deleting an associated record:</p>\n<ol dir=\"auto\">\n<li>by deleting it explicitly (i.e. <code class=\"notranslate\">parent.has_many.first.destroy!</code>),</li>\n<li>by replacing the association (i.e. <code class=\"notranslate\">parent.has_many = []</code>).</li>\n</ol>\n<p dir=\"auto\">Previously, Active Record respected the asynchronous deletion only with<br>\nthe first approach. When replacing the association, it just detached the<br>\nrecord(s) from the parent without removing them from the database (via<br>\nenqueuing relevant background job).</p>\n<p dir=\"auto\">Make the dependent option consistent and cleanup records from the<br>\ndatabase even when removing them via replacing the association.</p>\n<p dir=\"auto\"><span class=\"issue-keyword tooltipped tooltipped-se\" aria-label=\"This pull request closes issue #42430.\">Fixes</span> <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"916099836\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/42430\" data-hovercard-type=\"issue\" data-hovercard-url=\"/rails/rails/issues/42430/hovercard\" href=\"https://github.com/rails/rails/issues/42430\">#42430</a></p>",
+            "url": "https://github.com/rails/rails/pull/42452",
+            "title": "Respect the `dependent: :destroy_async` when replacing the association",
+            "date_modified": "2022-02-25T11:04:38.000Z",
+            "date_published": "2021-06-11T11:49:49.000Z",
             "author": {
-                "name": "byroot",
-                "url": "https://github.com/byroot"
+                "name": "smt116",
+                "url": "https://github.com/smt116"
             }
         }
     ]
