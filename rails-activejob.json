@@ -64,7 +64,7 @@
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/3535?u=6d56cccdc01d83cca3ac0b12468aa1c0d9c3ba0b&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This avoids interacting with the mutex when possible, i.e. when enable_reloading is false.</p>\n<p dir=\"auto\">This lets us use the view context class from Ractors without any additional setup.</p>",
             "url": "https://github.com/rails/rails/pull/57823",
             "title": "Initialize ActionView::LookupContext.view_context_class early",
-            "date_modified": "2026-06-26T10:16:09.000Z",
+            "date_modified": "2026-06-28T09:26:59.000Z",
             "date_published": "2026-06-23T09:58:51.000Z",
             "author": {
                 "name": "etiennebarrie",
