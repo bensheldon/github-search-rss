@@ -61,17 +61,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2394703?u=db3bfddb34846d7b948b10aae2bc4b6398edad45&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This extracts a private find_matching_job helper that assert_enqueued_with and assert_performed_with share.</p>",
-            "url": "https://github.com/rails/rails/pull/58401",
-            "title": "Extract duplicated job matching logic in ActiveJob::TestHelper",
-            "date_modified": "2026-08-07T08:22:49.000Z",
-            "date_published": "2026-08-07T07:07:33.000Z",
-            "author": {
-                "name": "seuros",
-                "url": "https://github.com/seuros"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/283380?u=0dca61750578c874fc71356e77845cb1682dd3cf&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\"><code class=\"notranslate\">ActiveJob#retry_on</code> currently accepts <code class=\"notranslate\">Proc</code> values for <code class=\"notranslate\">wait:</code>, but it<br>\nrejects other Ruby callables such as <code class=\"notranslate\">Method</code> objects and objects that<br>\nimplement <code class=\"notranslate\">#call</code>.</p>\n<p dir=\"auto\">This change allows <code class=\"notranslate\">wait:</code> to accept any callable object, while keeping<br>\nthe existing behavior for proc-based wait handlers.</p>\n<p dir=\"auto\">It also updates the <code class=\"notranslate\">retry_on</code> API docs, adds tests for callable<br>\nobjects and <code class=\"notranslate\">Method</code> values, and documents the change in the Active Job<br>\nchangelog.</p>\n<p dir=\"auto\">Example:</p>\n<div class=\"highlight highlight-source-ruby notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"class RetryDelay\n  def call(executions, error)\n    if error.message =~ /retry in (\\d+)s/\n      $1.to_i\n    else\n      executions * 2\n    end\n  end\nend\n\nclass RemoteServiceJob &lt; ActiveJob::Base\n  retry_on CustomError, wait: RetryDelay.new\nend\"><pre class=\"notranslate\"><span class=\"pl-k\">class</span> <span class=\"pl-v\">RetryDelay</span>\n  <span class=\"pl-k\">def</span> <span class=\"pl-en\">call</span><span class=\"pl-kos\">(</span><span class=\"pl-s1\">executions</span><span class=\"pl-kos\">,</span> <span class=\"pl-s1\">error</span><span class=\"pl-kos\">)</span>\n    <span class=\"pl-k\">if</span> <span class=\"pl-s1\">error</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">message</span> =~ <span class=\"pl-sr\">/retry in (<span class=\"pl-cce\">\\d</span>+)s/</span>\n      $1<span class=\"pl-kos\">.</span><span class=\"pl-en\">to_i</span>\n    <span class=\"pl-k\">else</span>\n      <span class=\"pl-s1\">executions</span> * <span class=\"pl-c1\">2</span>\n    <span class=\"pl-k\">end</span>\n  <span class=\"pl-k\">end</span>\n<span class=\"pl-k\">end</span>\n\n<span class=\"pl-k\">class</span> <span class=\"pl-v\">RemoteServiceJob</span> &lt; <span class=\"pl-v\">ActiveJob</span>::<span class=\"pl-v\">Base</span>\n  <span class=\"pl-en\">retry_on</span> <span class=\"pl-v\">CustomError</span><span class=\"pl-kos\">,</span> <span class=\"pl-pds\">wait</span>: <span class=\"pl-v\">RetryDelay</span><span class=\"pl-kos\">.</span><span class=\"pl-en\">new</span>\n<span class=\"pl-k\">end</span></pre></div>\n<p dir=\"auto\">Testing:</p>\n<div class=\"highlight highlight-source-shell notranslate position-relative overflow-auto\" dir=\"auto\" data-snippet-clipboard-copy-content=\"AJ_ADAPTER=test bin/test activejob/test/cases/exceptions_test.rb\"><pre class=\"notranslate\">AJ_ADAPTER=test bin/test activejob/test/cases/exceptions_test.rb</pre></div>",
             "url": "https://github.com/rails/rails/pull/57058",
             "title": "Allow retry_on wait to accept callable objects",
@@ -80,6 +69,17 @@
             "author": {
                 "name": "kryzhovnik",
                 "url": "https://github.com/kryzhovnik"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2394703?u=db3bfddb34846d7b948b10aae2bc4b6398edad45&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This extracts a private find_matching_job helper that assert_enqueued_with and assert_performed_with share.</p>",
+            "url": "https://github.com/rails/rails/pull/58401",
+            "title": "Extract duplicated job matching logic in ActiveJob::TestHelper",
+            "date_modified": "2026-08-07T08:22:49.000Z",
+            "date_published": "2026-08-07T07:07:33.000Z",
+            "author": {
+                "name": "seuros",
+                "url": "https://github.com/seuros"
             }
         },
         {
