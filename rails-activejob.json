@@ -138,17 +138,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2394703?u=db3bfddb34846d7b948b10aae2bc4b6398edad45&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This extracts a private find_matching_job helper that assert_enqueued_with and assert_performed_with share.</p>",
-            "url": "https://github.com/rails/rails/pull/58401",
-            "title": "Extract duplicated job matching logic in ActiveJob::TestHelper",
-            "date_modified": "2026-08-07T08:22:49.000Z",
-            "date_published": "2026-08-07T07:07:33.000Z",
-            "author": {
-                "name": "seuros",
-                "url": "https://github.com/seuros"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/47210781?u=64e57144fba855f7f4322548436f67589c0600cd&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">When using <code class=\"notranslate\">BroadcastLogger</code> with multiple destinations, calling methods like <code class=\"notranslate\">tagged</code> (which go through <code class=\"notranslate\">method_missing</code>) would execute the provided block once for each destination logger. This caused problems in real-world usage - for<br>\nexample, when using <code class=\"notranslate\">BroadcastLogger</code> with <code class=\"notranslate\">ActiveJob</code>, callbacks would fire multiple times instead of once.</p>\n<p dir=\"auto\">The <code class=\"notranslate\">dispatch</code> method already had logic to prevent this, but <code class=\"notranslate\">method_missing</code> didn't apply the same safeguard.</p>\n<h3 dir=\"auto\">Detail</h3>\n<p dir=\"auto\">This PR extracts the block-wrapping logic from <code class=\"notranslate\">dispatch</code> into a new private method <code class=\"notranslate\">wrap_block_for_broadcast</code> and applies it consistently in both <code class=\"notranslate\">dispatch</code> and <code class=\"notranslate\">method_missing</code>. The wrapper ensures blocks execute only once, with the<br>\nresult cached and returned to subsequent loggers.</p>\n<p dir=\"auto\">Changes:</p>\n<ul dir=\"auto\">\n<li>Added <code class=\"notranslate\">wrap_block_for_broadcast</code> helper method</li>\n<li>Updated <code class=\"notranslate\">method_missing</code> to wrap blocks before broadcasting</li>\n<li>Added tests verifying blocks execute once regardless of destination count</li>\n<li>Updated CHANGELOG</li>\n</ul>\n<h3 dir=\"auto\">Checklist</h3>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> This Pull Request is related to one change. Unrelated changes should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Commit message has a detailed description of what changed and why.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/56650",
             "title": "Fix BroadcastLogger to execute blocks only once with multiple destinations",
@@ -157,6 +146,17 @@
             "author": {
                 "name": "QuirkQ",
                 "url": "https://github.com/QuirkQ"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/2394703?u=db3bfddb34846d7b948b10aae2bc4b6398edad45&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">This extracts a private find_matching_job helper that assert_enqueued_with and assert_performed_with share.</p>",
+            "url": "https://github.com/rails/rails/pull/58401",
+            "title": "Extract duplicated job matching logic in ActiveJob::TestHelper",
+            "date_modified": "2026-08-07T08:22:49.000Z",
+            "date_published": "2026-08-07T07:07:33.000Z",
+            "author": {
+                "name": "seuros",
+                "url": "https://github.com/seuros"
             }
         },
         {
