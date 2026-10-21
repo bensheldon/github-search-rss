@@ -6,21 +6,10 @@
     "description": "rails/rails: Issues containing 'ActiveJob Job' on GitHub",
     "items": [
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/544377?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Update <code class=\"notranslate\">ActiveJob::SerializationError</code>'s supported-types list to include <code class=\"notranslate\">Class</code> and <code class=\"notranslate\">Module</code>, matching the Active Job guide.</p>",
-            "url": "https://github.com/rails/rails/pull/59196",
-            "title": "[ci skip] Document Active Job class and module arguments",
-            "date_modified": "2026-10-19T21:21:14.000Z",
-            "date_published": "2026-10-19T21:17:56.000Z",
-            "author": {
-                "name": "skatkov",
-                "url": "https://github.com/skatkov"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/326046901?u=7313fb4949a37a185a89e4f2c86a7070c5cbf23e&v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">After <code class=\"notranslate\">ractorize!</code>, building a job that includes <code class=\"notranslate\">ActiveJob::Continuable</code> (or <code class=\"notranslate\">ActiveJob::Attributes</code>) in a non-main Ractor raises <code class=\"notranslate\">Ractor::IsolationError</code> on <code class=\"notranslate\">@pending_attribute_modifications</code>. Scheduling its resumption then raises on <code class=\"notranslate\">resume_options</code>.</p>\n<h3 dir=\"auto\">Detail</h3>\n<ul dir=\"auto\">\n<li><code class=\"notranslate\">_default_attributes</code> and <code class=\"notranslate\">attribute_types</code> are built and memoized in the main Ractor and made shareable, so other Ractors only dispatch the first time. The values of the attributes that instances share are read first, because attributes memoize their values.</li>\n<li><code class=\"notranslate\">ractorize!</code> makes <code class=\"notranslate\">resume_options</code> shareable on continuable jobs.</li>\n</ul>\n<p dir=\"auto\">Resuming a serialized job in another Ractor also needs <a class=\"issue-link js-issue-link\" data-error-text=\"Failed to load title\" data-id=\"5744203324\" data-permission-text=\"Title is private\" data-url=\"https://github.com/rails/rails/issues/58974\" data-hovercard-type=\"pull_request\" data-hovercard-url=\"/rails/rails/pull/58974/hovercard\" href=\"https://github.com/rails/rails/pull/58974\">#58974</a>. Tested on Ruby 4.0 and Ruby master.</p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> This Pull Request is related to one change. Unrelated changes should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Incomplete task\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included. (<code class=\"notranslate\">ractorize!</code> is experimental and <code class=\"notranslate\">:nodoc:</code>; earlier Ractor PRs didn't add entries.)</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/58980",
             "title": "Make continuable jobs work in non-main Ractors",
-            "date_modified": "2026-10-16T14:19:26.000Z",
+            "date_modified": "2026-10-20T00:24:47.000Z",
             "date_published": "2026-10-07T13:32:24.000Z",
             "author": {
                 "name": "yaroslav-shopify",
@@ -179,6 +168,17 @@
             "author": {
                 "name": "mikeygough",
                 "url": "https://github.com/mikeygough"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/544377?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Update <code class=\"notranslate\">ActiveJob::SerializationError</code>'s supported-types list to include <code class=\"notranslate\">Class</code> and <code class=\"notranslate\">Module</code>, matching the Active Job guide.</p>",
+            "url": "https://github.com/rails/rails/pull/59196",
+            "title": "[ci skip] Document Active Job class and module arguments",
+            "date_modified": "2026-10-20T08:49:32.000Z",
+            "date_published": "2026-10-19T21:17:56.000Z",
+            "author": {
+                "name": "skatkov",
+                "url": "https://github.com/skatkov"
             }
         },
         {
