@@ -193,17 +193,6 @@
             }
         },
         {
-            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/544377?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Update <code class=\"notranslate\">ActiveJob::SerializationError</code>'s supported-types list to include <code class=\"notranslate\">Class</code> and <code class=\"notranslate\">Module</code>, matching the Active Job guide.</p>",
-            "url": "https://github.com/rails/rails/pull/59196",
-            "title": "[ci skip] Document Active Job class and module arguments",
-            "date_modified": "2026-10-20T08:49:32.000Z",
-            "date_published": "2026-10-19T21:17:56.000Z",
-            "author": {
-                "name": "skatkov",
-                "url": "https://github.com/skatkov"
-            }
-        },
-        {
             "content_html": "<img src=\"https://avatars.githubusercontent.com/u/295329?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><h3 dir=\"auto\">Motivation / Background</h3>\n<p dir=\"auto\">This Pull Request has been created because: I was reviewing a PR that used the callback chain halt technique but couldn't see any details in the ActiveJob docs on how these worked. I figure this change will be useful for someone else and avoid them having to read the source / other docs to find this info.</p>\n<h3 dir=\"auto\">Detail</h3>\n<p dir=\"auto\">This Pull Request changes the ActiveJob docs, to explain how job callback chain halting works. I coped the details from Active Record and provided a link to <a href=\"https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html\" rel=\"nofollow\">https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html</a> for more details.</p>\n<h3 dir=\"auto\">Additional information</h3>\n<p dir=\"auto\">Seems the main place rails docs the <a href=\"https://github.com/rails/rails/blob/a6dee8c5b1baffa0ac9e57016b90d8c88a8db1f6/activesupport/lib/active_support/callbacks.rb\">ActiveSupport callbacks</a> are in <a href=\"https://guides.rubyonrails.org/active_record_callbacks.html\" rel=\"nofollow\">https://guides.rubyonrails.org/active_record_callbacks.html</a>. There is some information in the <a href=\"https://api.rubyonrails.org/classes/ActiveSupport/Callbacks.html\" rel=\"nofollow\">ActiveSupport docs</a></p>\n<h3 dir=\"auto\">Checklist</h3>\n<p dir=\"auto\">Before submitting the PR make sure the following are checked:</p>\n<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> This Pull Request is related to one change. Unrelated changes should be opened in separate PRs.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Commit message has a detailed description of what changed and why. If this PR fixes a related issue include it in the commit message. Ex: <code class=\"notranslate\">[Fix #issue-number]</code></li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> Tests are added or updated if you fix a bug or add a feature.</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" id=\"\" disabled=\"\" class=\"task-list-item-checkbox\" aria-label=\"Completed task\" checked=\"\"> CHANGELOG files are updated for the changed libraries if there is a behavior change or additional feature. Minor bug fixes and documentation changes should not be included.</li>\n</ul>",
             "url": "https://github.com/rails/rails/pull/53541",
             "title": "Update ActiveJob docs to show how to halt the callback chain",
@@ -212,6 +201,17 @@
             "author": {
                 "name": "camallen",
                 "url": "https://github.com/camallen"
+            }
+        },
+        {
+            "content_html": "<img src=\"https://avatars.githubusercontent.com/u/544377?v=4\" width=\"64\" height=\"64\" alt=\"\"/><br/><p dir=\"auto\">Update <code class=\"notranslate\">ActiveJob::SerializationError</code>'s supported-types list to include <code class=\"notranslate\">Class</code> and <code class=\"notranslate\">Module</code>, matching the Active Job guide.</p>",
+            "url": "https://github.com/rails/rails/pull/59196",
+            "title": "[ci skip] Document Active Job class and module arguments",
+            "date_modified": "2026-10-20T08:49:32.000Z",
+            "date_published": "2026-10-19T21:17:56.000Z",
+            "author": {
+                "name": "skatkov",
+                "url": "https://github.com/skatkov"
             }
         },
         {
